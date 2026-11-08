@@ -1,114 +1,732 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071321"><title>LY CARDS | المرحلة الأولى الآمنة</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071321">
+<title>LY CARDS | المرحلة الأولى الآمنة</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
 :root{--bg:#050d18;--panel:#0b1b2d;--panel2:#10243a;--line:#173957;--cyan:#08c7f5;--cyan2:#00a9dc;--text:#effaff;--muted:#83a4ba;--green:#26d69a;--red:#ff657d;--shadow:0 12px 40px #0008}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#123d5a 0,transparent 42%),var(--bg);color:var(--text);font-family:'Cairo',Tahoma,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1120px;margin:auto;padding:0 18px 100px}.top{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #17324a;position:sticky;top:0;background:#06111eeF;backdrop-filter:blur(14px);z-index:10;padding:0 max(18px,calc((100vw - 1084px)/2))}.brand{font-weight:900;font-size:22px;letter-spacing:1px;color:#eafaff}.brand span{color:var(--cyan);text-shadow:0 0 18px #00cfff88}.top-actions{display:flex;gap:9px;align-items:center}.iconbtn,.wallet-pill{border:1px solid var(--line);background:#0b1d30;color:#eafaff;border-radius:13px;padding:9px 12px}.iconbtn{font-size:18px;position:relative}.count{position:absolute;top:-7px;left:-6px;background:var(--cyan);color:#002233;border-radius:20px;font-size:10px;padding:1px 6px;font-weight:900}.wallet-pill{font-size:12px;color:#a9d9ec}.wallet-pill b{color:var(--cyan);margin-right:5px}.hero{padding:44px 0 25px;text-align:center}.eyebrow{display:inline-flex;gap:7px;align-items:center;border:1px solid #15516c;background:#09243a;color:#63dfff;border-radius:30px;padding:5px 13px;font-size:11px}.hero h1{font-size:clamp(26px,5vw,43px);line-height:1.35;margin:17px 0 9px;font-weight:900}.hero h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 24px #00bfff55}.hero p{color:var(--muted);font-size:13px;margin:0 auto;max-width:500px}.section-head{display:flex;justify-content:space-between;align-items:center;margin:25px 0 14px}.section-head h2{font-size:17px;margin:0}.hint{color:var(--muted);font-size:11px}.categories{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.cat{border:1px solid #1b4662;border-radius:19px;padding:18px;background:linear-gradient(145deg,#102b44,#081727);text-align:right;min-height:116px;position:relative;overflow:hidden;transition:.2s}.cat:after{content:'';position:absolute;width:95px;height:95px;border-radius:50%;background:#00bfff12;left:-22px;top:-25px;filter:blur(4px)}.cat.active{border-color:var(--cyan);box-shadow:0 0 0 1px #00cfff22,0 0 24px #00bfff20}.cat .symbol{font-size:21px;color:var(--cyan)}.cat h3{margin:4px 0;font-size:17px}.cat p{margin:0;color:var(--muted);font-size:11px}.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.product{border:1px solid #173c59;border-radius:18px;background:linear-gradient(150deg,#102a43,#081827 75%);padding:16px;position:relative;overflow:hidden}.product:before{content:'';position:absolute;inset:0 auto auto 0;width:90px;height:90px;background:radial-gradient(circle,#00bfff20,transparent 70%)}.product-top{display:flex;justify-content:space-between;align-items:center}.network{font-size:11px;color:#a7d7e8}.network-dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);display:inline-block;margin-left:5px}.denom{font-size:30px;font-weight:900;color:#eafaff;line-height:1.5}.denom small{font-size:12px;color:var(--cyan)}.product-foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px}.price{font-weight:800;color:var(--cyan);font-size:17px}.price small{font-size:10px;color:var(--muted);font-weight:500}.add{border:0;border-radius:11px;background:linear-gradient(100deg,#04a9df,#11d1f7);color:#00283a;font-weight:900;padding:9px 13px;font-size:11px;box-shadow:0 5px 18px #00bfff22}.add:active{transform:scale(.97)}.tabs{display:flex;gap:8px;margin:15px 0}.tab{border:1px solid var(--line);background:#0a1a2b;color:#a7c3d3;border-radius:30px;padding:8px 16px;font-size:12px}.tab.active{background:#07334b;border-color:var(--cyan);color:#7de8ff}.panel{background:linear-gradient(145deg,#0c2033,#081522);border:1px solid var(--line);border-radius:19px;padding:17px;margin-top:17px}.panel h3{margin:0 0 13px;font-size:15px}.empty{text-align:center;color:var(--muted);padding:35px 10px}.empty .big{font-size:36px;margin-bottom:8px}.rowitem{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid #173047;padding:12px 0}.rowitem:last-child{border:0}.muted{color:var(--muted);font-size:11px}.qty{display:flex;gap:9px;align-items:center}.qty button{background:#102c43;color:var(--cyan);border:1px solid #1c4a67;border-radius:8px;width:27px;height:27px}.summary{border-top:1px solid #1b3b53;padding-top:14px;margin-top:8px}.sumline{display:flex;justify-content:space-between;margin:7px 0;color:#a8c5d5;font-size:13px}.sumline.total{font-size:17px;color:white;font-weight:900}.primary{width:100%;border:0;border-radius:12px;background:linear-gradient(100deg,#00a9df,#12d4f6);color:#002334;font-weight:900;padding:12px;margin-top:12px}.secondary{border:1px solid #1d536e;background:#0c263b;color:#8deaff;border-radius:11px;padding:10px 14px}.danger{border:1px solid #663344;background:#2b1723;color:#ff9aab;border-radius:10px;padding:7px 10px}.page{display:none}.page.active{display:block}.field{display:block;width:100%;margin:8px 0 12px;background:#061321;border:1px solid #21435b;color:white;border-radius:11px;padding:11px;outline:none}.field:focus{border-color:var(--cyan)}label{font-size:11px;color:#a8c7d7}.statgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat{background:#0c263b;border:1px solid #1a4562;border-radius:14px;padding:13px}.stat small{color:var(--muted)}.stat strong{display:block;color:var(--cyan);font-size:21px;margin-top:4px}.adminnav{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:13px}.adminnav button{font-size:11px}.order{border:1px solid #1b3d56;border-radius:13px;padding:12px;margin:9px 0;background:#0a1a2a}.status{font-size:10px;border-radius:20px;padding:4px 9px;background:#123b4b;color:#6de4ff}.status.ok{background:#12392f;color:#61e6b4}.status.bad{background:#4a2028;color:#ff9aaa}.status.wait{background:#42351a;color:#ffd36b}.bottomnav{position:fixed;bottom:0;left:0;right:0;z-index:11;background:#06111ef2;border-top:1px solid #18344b;backdrop-filter:blur(15px);display:flex;justify-content:center}.navinner{width:min(700px,100%);display:grid;grid-template-columns:repeat(5,1fr);padding:7px 10px max(7px,env(safe-area-inset-bottom))}.navitem{border:0;background:none;color:#7896aa;font-size:10px;padding:5px}.navitem span{display:block;font-size:19px;margin-bottom:1px}.navitem.active{color:var(--cyan)}.toast{position:fixed;bottom:85px;left:50%;transform:translate(-50%,20px);background:#0e3046;border:1px solid #1b7896;border-radius:12px;padding:10px 17px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:30;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.modalbg{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;padding:18px;z-index:25}.modalbg.show{display:flex}.modal{width:min(440px,100%);background:#0b1d2e;border:1px solid #1d526f;border-radius:20px;padding:20px;max-height:85vh;overflow:auto}.modalhead{display:flex;justify-content:space-between;align-items:center}.close{background:none;border:0;color:#9ec5d8;font-size:22px}.foot{text-align:center;color:#56788e;font-size:10px;padding:35px 0 10px}.hide{display:none!important}
 @media(min-width:700px){.products{grid-template-columns:repeat(4,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.hero{padding:65px 0 30px}.statgrid{grid-template-columns:repeat(4,1fr)}}
-</style></head>
+</style>
+</head>
 <body>
-<header class="top"><div class="brand">LY <span>CARDS</span></div><div class="top-actions"><button class="wallet-pill" onclick="showPage('wallet')">رصيدي <b id="headBalance">0.00 د.ل</b></button><button class="iconbtn" onclick="showPage('cart')">🛒<i class="count" id="cartCount">0</i></button><button class="iconbtn" onclick="openAccount()">♙</button></div></header>
+<header class="top">
+<div class="brand">LY <span>CARDS</span></div>
+<div class="top-actions">
+<button class="wallet-pill" onclick="showPage('wallet')">رصيدي <b id="headBalance">0.00 د.ل</b></button>
+<button class="iconbtn" onclick="showPage('cart')">🛒<i class="count" id="cartCount">0</i></button>
+<button class="iconbtn" onclick="openAccount()">♙</button>
+</div>
+</header>
+
 <main class="wrap">
 <section id="home" class="page active">
-<div class="hero"><div class="eyebrow">✦ تحديث محسّن • تسجيل دخول أكثر استقراراً</div><h1>كروت الشحن الليبية<br><em>بضغطة واحدة</em></h1><p>كل كروت المدار وليبيانا في مكان واحد. اختر كرتك وأكمل طلبك بكل سهولة.</p><p class="muted" style="margin-top:9px">تسجيل Google الحقيقي عبر Firebase. المتجر للمعاينة فقط؛ الشراء والمحفظة غير مفعّلين بعد.</p></div>
+<div class="hero">
+<div class="eyebrow">✦ تحديث محسّن • تسجيل دخول أكثر استقراراً</div>
+<h1>كروت الشحن الليبية<br><em>بضغطة واحدة</em></h1>
+<p>كل كروت المدار وليبيانا في مكان واحد. اختر كرتك وأكمل طلبك بكل سهولة.</p>
+<p class="muted" style="margin-top:9px">تسجيل Google الحقيقي عبر Firebase. المتجر للمعاينة فقط؛ الشراء والمحفظة غير مفعّلين بعد.</p>
+</div>
 <div class="section-head"><h2>تصنيفات الكروت</h2><span class="hint">اختر الشركة</span></div>
-<div class="categories"><button class="cat" onclick="chooseNetwork('المدار')"><div class="symbol">◈</div><h3>المدار</h3><p>كروت شحن المدار</p></button><button class="cat" onclick="chooseNetwork('ليبيانا')"><div class="symbol">◉</div><h3>ليبيانا</h3><p>كروت شحن ليبيانا</p></button></div>
-<div class="section-head"><h2>جميع الكروت</h2><span class="hint">متوفرة الآن</span></div><div class="tabs"><button class="tab active" onclick="filterProducts('الكل',this)">الكل</button><button class="tab" onclick="filterProducts('المدار',this)">المدار</button><button class="tab" onclick="filterProducts('ليبيانا',this)">ليبيانا</button></div><div id="homeProducts" class="products"></div>
-<div class="panel"><h3>لماذا LY CARDS؟</h3><div class="statgrid"><div><b>⚡ سريع</b><div class="muted">طلب سهل وسريع</div></div><div><b>🔒 موثوق</b><div class="muted">متابعة حالة الطلب</div></div></div></div>
+<div class="categories">
+<button class="cat" onclick="chooseNetwork('المدار')">
+<div class="symbol">◈</div><h3>المدار</h3><p>كروت شحن المدار</p>
+</button>
+<button class="cat" onclick="chooseNetwork('ليبيانا')">
+<div class="symbol">◉</div><h3>ليبيانا</h3><p>كروت شحن ليبيانا</p>
+</button>
+</div>
+<div class="section-head"><h2>جميع الكروت</h2><span class="hint">متوفرة الآن</span></div>
+<div class="tabs">
+<button class="tab active" onclick="filterProducts('الكل',this)">الكل</button>
+<button class="tab" onclick="filterProducts('المدار',this)">المدار</button>
+<button class="tab" onclick="filterProducts('ليبيانا',this)">ليبيانا</button>
+</div>
+<div id="homeProducts" class="products"></div>
+<div class="panel">
+<h3>لماذا LY CARDS؟</h3>
+<div class="statgrid">
+<div><b>⚡ سريع</b><div class="muted">طلب سهل وسريع</div></div>
+<div><b>🔒 موثوق</b><div class="muted">متابعة حالة الطلب</div></div>
+</div>
+</div>
 </section>
-<section id="store" class="page"><div class="hero"><div class="eyebrow">LY CARDS STORE</div><h1>متجر <em>الكروت</em></h1><p>اختر شركة الاتصالات ثم حدد فئة الكرت المناسبة.</p></div><div class="tabs"><button class="tab active" onclick="filterStore('الكل',this)">الكل</button><button class="tab" onclick="filterStore('المدار',this)">المدار</button><button class="tab" onclick="filterStore('ليبيانا',this)">ليبيانا</button></div><div id="storeProducts" class="products"></div></section>
-<section id="cart" class="page"><div class="hero"><div class="eyebrow">مراجعة مشترياتك</div><h1>سلة <em>المشتريات</em></h1></div><div class="panel" id="cartPanel"></div></section>
-<section id="wallet" class="page"><div class="hero"><div class="eyebrow">محفظتك الرقمية</div><h1>المحفظة <em>الإلكترونية</em></h1></div><div class="panel"><div class="muted">الرصيد التجريبي على هذا الجهاز فقط</div><div style="font-size:34px;font-weight:900;color:var(--cyan)" id="walletBalance">0.00 د.ل</div><button class="primary" onclick="openTopup()">＋ طلب شحن المحفظة</button><p class="muted">تنبيه: المحفظة والتحويلات غير مفعّلة بعد. لا ترسل أموالاً لهذا الإصدار.</p></div><div class="panel"><h3>سجل العمليات</h3><div id="walletHistory" class="muted">لا توجد عمليات بعد.</div></div></section>
-<section id="orders" class="page"><div class="hero"><div class="eyebrow">تابع مشترياتك</div><h1>طلباتي</h1></div><div id="ordersList" class="panel"></div></section>
-<section id="admin" class="page"><div class="hero"><div class="eyebrow">LY CARDS CONTROL</div><h1>لوحة <em>الإدارة</em></h1><p>لوحة الإدارة لن تُفعّل قبل ربط قاعدة البيانات والصلاحيات الآمنة.</p></div><div class="statgrid" id="adminStats"></div><div class="panel"><div class="adminnav"><button class="tab active" onclick="adminTab('orders',this)">الطلبات</button><button class="tab" onclick="adminTab('products',this)">المنتجات</button><button class="tab" onclick="adminTab('topups',this)">شحن المحفظة</button><button class="tab" onclick="adminTab('settings',this)">الإعدادات</button><button class="tab" onclick="adminTab('bank',this)">بياناتي المصرفية</button></div><div id="adminContent"></div></div></section>
+<section id="store" class="page">
+<div class="hero">
+<div class="eyebrow">LY CARDS STORE</div>
+<h1>متجر <em>الكروت</em></h1>
+<p>اختر شركة الاتصالات ثم حدد فئة الكرت المناسبة.</p>
+</div>
+<div class="tabs">
+<button class="tab active" onclick="filterStore('الكل',this)">الكل</button>
+<button class="tab" onclick="filterStore('المدار',this)">المدار</button>
+<button class="tab" onclick="filterStore('ليبيانا',this)">ليبيانا</button>
+</div>
+<div id="storeProducts" class="products"></div>
+</section>
+<section id="cart" class="page">
+<div class="hero"><div class="eyebrow">مراجعة مشترياتك</div><h1>سلة <em>المشتريات</em></h1></div>
+<div class="panel" id="cartPanel"></div>
+</section>
+<section id="wallet" class="page">
+<div class="hero"><div class="eyebrow">محفظتك الرقمية</div><h1>المحفظة <em>الإلكترونية</em></h1></div>
+<div class="panel">
+<div class="muted">الرصيد التجريبي على هذا الجهاز فقط</div>
+<div style="font-size:34px;font-weight:900;color:var(--cyan)" id="walletBalance">0.00 د.ل</div>
+<button class="primary" onclick="openTopup()">＋ طلب شحن المحفظة</button>
+<p class="muted">تنبيه: المحفظة والتحويلات غير مفعّلة بعد. لا ترسل أموالاً لهذا الإصدار.</p>
+</div>
+<div class="panel"><h3>سجل العمليات</h3><div id="walletHistory" class="muted">لا توجد عمليات بعد.</div></div>
+</section>
+<section id="orders" class="page">
+<div class="hero"><div class="eyebrow">تابع مشترياتك</div><h1>طلباتي</h1></div>
+<div id="ordersList" class="panel"></div>
+</section>
+<section id="admin" class="page">
+<div class="hero">
+<div class="eyebrow">LY CARDS CONTROL</div>
+<h1>لوحة <em>الإدارة</em></h1>
+<p>لوحة الإدارة لن تُفعّل قبل ربط قاعدة البيانات والصلاحيات الآمنة.</p>
+</div>
+<div class="statgrid" id="adminStats"></div>
+<div class="panel">
+<div class="adminnav">
+<button class="tab active" onclick="adminTab('orders',this)">الطلبات</button>
+<button class="tab" onclick="adminTab('products',this)">المنتجات</button>
+<button class="tab" onclick="adminTab('topups',this)">شحن المحفظة</button>
+<button class="tab" onclick="adminTab('settings',this)">الإعدادات</button>
+<button class="tab" onclick="adminTab('bank',this)">بياناتي المصرفية</button>
+</div>
+<div id="adminContent"></div>
+</div>
+</section>
 <div class="foot">LY CARDS © 2026 — جميع الحقوق محفوظة<br>نسخة تطوير آمنة • لا تدفع ولا تحوّل أموالاً من هذا الإصدار</div>
 </main>
-<nav class="bottomnav"><div class="navinner"><button class="navitem active" data-page="home" onclick="showPage('home',this)"><span>⌂</span>الرئيسية</button><button class="navitem" data-page="store" onclick="showPage('store',this)"><span>▦</span>المتجر</button><button class="navitem" data-page="cart" onclick="showPage('cart',this)"><span>🛒</span>السلة</button><button class="navitem" data-page="wallet" onclick="showPage('wallet',this)"><span>◈</span>المحفظة</button><button class="navitem" data-page="orders" onclick="showPage('orders',this)"><span>▤</span>طلباتي</button></div></nav>
-<div class="toast" id="toast"></div><div class="modalbg" id="modalbg" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="modalhead"><h3 id="modalTitle">تسجيل الدخول</h3><button class="close" onclick="closeModal()">×</button></div><div id="modalBody"></div></div></div>
+<nav class="bottomnav">
+<div class="navinner">
+<button class="navitem active" data-page="home" onclick="showPage('home',this)"><span>⌂</span>الرئيسية</button>
+<button class="navitem" data-page="store" onclick="showPage('store',this)"><span>▦</span>المتجر</button>
+<button class="navitem" data-page="cart" onclick="showPage('cart',this)"><span>🛒</span>السلة</button>
+<button class="navitem" data-page="wallet" onclick="showPage('wallet',this)"><span>◈</span>المحفظة</button>
+<button class="navitem" data-page="orders" onclick="showPage('orders',this)"><span>▤</span>طلباتي</button>
+</div>
+</nav>
+<div class="toast" id="toast"></div>
+<div class="modalbg" id="modalbg" onclick="if(event.target===this)closeModal()">
+<div class="modal">
+<div class="modalhead">
+<h3 id="modalTitle">تسجيل الدخول</h3>
+<button class="close" onclick="closeModal()">×</button>
+</div>
+<div id="modalBody"></div>
+</div>
+</div>
 <script>
-const defaults=[{id:1,network:'المدار',value:5,price:6,active:true},{id:2,network:'المدار',value:10,price:12,active:true},{id:3,network:'ليبيانا',value:5,price:6,active:true},{id:4,network:'ليبيانا',value:10,price:12,active:true}];
-let products=load('ly_products',defaults),cart=load('ly_cart',[]),balance=load('ly_balance',0),orders=load('ly_orders',[]),topups=load('ly_topups',[]),history=load('ly_history',[]),user=load('ly_user',null),adminMode=false,adminSection='orders',bankData=load('ly_bankdata',{bank:'',owner:'',account:'',iban:'',whatsapp:''});
-function load(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}}function save(){[['ly_products',products],['ly_cart',cart],['ly_balance',balance],['ly_orders',orders],['ly_topups',topups],['ly_history',history],['ly_user',user],['ly_bankdata',bankData]].forEach(([k,v])=>localStorage.setItem(k,JSON.stringify(v)))}
-function money(n){return Number(n).toFixed(2)+' د.ل'}function toast(s){let t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
-function showPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.navitem').forEach(n=>n.classList.toggle('active',n.dataset.page===id));if(id==='cart')renderCart();if(id==='wallet')renderWallet();if(id==='orders')renderOrders();if(id==='admin')renderAdmin();window.scrollTo({top:0,behavior:'smooth'})}
-function productCard(p){return `<article class="product"><div class="product-top"><span class="network"><i class="network-dot"></i>${p.network}</span><span class="muted">متوفر</span></div><div class="denom">${p.value}<small> د.ل</small></div><div class="muted">كرت شحن ${p.network}</div><div class="product-foot"><div class="price">${money(p.price)}<br><small>سعر البيع</small></div><button class="add" onclick="addCart(${p.id})">＋ أضف للسلة</button></div></article>`}
-function renderProducts(){let live=products.filter(p=>p.active);document.getElementById('homeProducts').innerHTML=live.map(productCard).join('');document.getElementById('storeProducts').innerHTML=live.map(productCard).join('')||'<div class="empty">لا توجد كروت حالياً</div>'}
-function filterProducts(net,btn){document.querySelectorAll('#home .tabs .tab').forEach(x=>x.classList.remove('active'));btn.classList.add('active');document.getElementById('homeProducts').innerHTML=products.filter(p=>p.active&&(net==='الكل'||p.network===net)).map(productCard).join('')}
-function filterStore(net,btn){document.querySelectorAll('#store .tabs .tab').forEach(x=>x.classList.remove('active'));btn.classList.add('active');document.getElementById('storeProducts').innerHTML=products.filter(p=>p.active&&(net==='الكل'||p.network===net)).map(productCard).join('')}
-function chooseNetwork(net){showPage('store');let b=[...document.querySelectorAll('#store .tab')].find(x=>x.textContent===net);filterStore(net,b)}
-function addCart(id){let p=products.find(x=>x.id===id);let item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});save();updateHeader();toast('تمت إضافة الكرت إلى السلة')}
-function updateHeader(){document.getElementById('cartCount').textContent=cart.reduce((a,x)=>a+x.qty,0);document.getElementById('headBalance').textContent=money(balance);}
-function renderCart(){let el=document.getElementById('cartPanel');if(!cart.length){el.innerHTML='<div class="empty"><div class="big">🛒</div><b>سلتك فارغة</b><p>أضف بعض كروت الشحن لتبدأ</p><button class="primary" onclick="showPage(\'store\')">تصفح الكروت</button></div>';return}let total=0;el.innerHTML=cart.map(i=>{let p=products.find(x=>x.id===i.id);if(!p)return '';total+=p.price*i.qty;return `<div class="rowitem"><div><b>${p.network} — ${p.value} د.ل</b><div class="muted">${money(p.price)} للكرت</div></div><div class="qty"><button onclick="qty(${p.id},-1)">−</button><b>${i.qty}</b><button onclick="qty(${p.id},1)">＋</button><button class="danger" onclick="removeCart(${p.id})">×</button></div></div>`}).join('')+`<div class="summary"><div class="sumline"><span>المجموع</span><b>${money(total)}</b></div><div class="sumline"><span>رسوم الخدمة</span><b>مجاني</b></div><div class="sumline total"><span>الإجمالي</span><b>${money(total)}</b></div><button class="primary" onclick="checkout()">تأكيد الطلب</button></div>`}
-function qty(id,d){let i=cart.find(x=>x.id===id);i.qty+=d;if(i.qty<=0)cart=cart.filter(x=>x.id!==id);save();renderCart();updateHeader()}function removeCart(id){cart=cart.filter(x=>x.id!==id);save();renderCart();updateHeader()}
-function checkout(){toast('الشراء الحقيقي غير مفعّل بعد؛ لن يتم خصم أي مبلغ.');}
-function renderWallet(){document.getElementById('walletBalance').textContent=money(balance);document.getElementById('walletHistory').innerHTML=history.length?history.map(h=>`<div class="rowitem"><div><b>${h.title}</b><div class="muted">${h.date}</div></div><b style="color:${h.amount>0?'var(--green)':'var(--cyan)'}">${h.amount>0?'+':''}${money(h.amount)}</b></div>`).join(''):'لا توجد عمليات بعد.'}
-function renderOrders(){let el=document.getElementById('ordersList');el.innerHTML=orders.length?orders.map(o=>`<div class="order"><div style="display:flex;justify-content:space-between"><b>${o.id}</b><span class="status ${o.status==='تم إرسال الأكواد'?'ok':o.status==='مرفوض'?'bad':'wait'}">${o.status}</span></div><div class="muted">${o.date}</div><div class="sumline"><span>عدد الكروت</span><b>${o.items.reduce((a,i)=>a+i.qty,0)}</b></div><div class="sumline"><span>الإجمالي</span><b>${money(o.total)}</b></div>${o.status==='مرفوض'?`<div class="muted" style="color:var(--green)">تم رفض الطلب وإرجاع ${money(o.total)} إلى محفظتك ${o.refunded?'بنجاح':'— بانتظار تحديث الرصيد'}.</div>`:''}</div>`).join(''):'<div class="empty"><div class="big">▤</div>لا توجد طلبات حتى الآن</div>'}
-function openModal(title,html){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=html;document.getElementById('modalbg').classList.add('show')}function closeModal(){document.getElementById('modalbg').classList.remove('show')}
-function openLogin(msg=''){openModal('تسجيل الدخول',`${msg?`<p class="muted">${msg}</p>`:''}<p class="muted">سجّل الدخول بحساب Google الرسمي. سيتم حفظ ملفك الشخصي في Firebase عند استضافة الموقع على نطاق مسموح.</p><button class="primary" onclick="googleDemoLogin(this)" data-google-login>🌐 المتابعة باستخدام Google</button><p class="muted">لن نطلب منك كلمة المرور هنا؛ ستظهر نافذة Google الرسمية. ملاحظة: يجب فتح الموقع من رابط مستضاف (وليس من ملف HTML محلي) حتى يقبل Firebase تسجيل الدخول.</p>`)}
-async function googleDemoLogin(btn){if(window.lyLoginBusy)return;window.lyLoginBusy=true;const b=btn||document.querySelector('[data-google-login]');if(b){b.disabled=true;b.dataset.oldText=b.textContent;b.textContent='جارٍ فتح Google...'}try{await window.lyFirebaseLogin()}catch(e){console.error('Google sign-in:',e);const code=e?.code||'';let msg='تعذر تسجيل الدخول. حاول مرة أخرى.';if(code==='auth/cancelled-popup-request')msg='تم إلغاء نافذة تسجيل سابقة. انتظر قليلاً ثم اضغط مرة واحدة.';else if(code==='auth/popup-blocked')msg='Chrome منع النافذة المنبثقة. اسمح بالنوافذ المنبثقة لهذا الموقع.';else if(code==='auth/unauthorized-domain')msg='نطاق الموقع غير مضاف في Firebase. يجب استضافة الموقع وإضافة النطاق في Authentication.';else if(code==='auth/popup-closed-by-user')msg='أغلقت نافذة Google قبل إكمال تسجيل الدخول.';else if(code==='auth/operation-not-allowed')msg='تسجيل Google غير مفعّل في Firebase Authentication.';else if(code==='auth/network-request-failed')msg='تحقق من اتصال الإنترنت ثم أعد المحاولة.';toast(msg)}finally{window.lyLoginBusy=false;if(b){b.disabled=false;b.textContent=b.dataset.oldText||'🌐 المتابعة باستخدام Google'}}}
-function openAccount(){if(!user){openLogin();return}openModal('حسابي',`<p><b>${user.name||'المستخدم'}</b></p><p class="muted">${user.email||''}</p><p class="muted">${user.phone||'يمكن إضافة رقم الهاتف لاحقاً'}</p><button class="secondary" onclick="closeModal();showPage('orders')">طلباتي</button> <button class="secondary" onclick="adminLogin()">دخول الإدارة</button> <button class="danger" onclick="logoutUser()">تسجيل الخروج</button>`)}
-async function logoutUser(){try{await window.lyFirebaseLogout();user=null;save();closeModal();toast('تم تسجيل الخروج')}catch(e){toast('تعذر تسجيل الخروج')}}
-function openTopup(){if(!user){openLogin('سجّل الدخول أولاً');return}toast('شحن المحفظة غير مفعّل في هذه النسخة. لا تحوّل أي أموال.');return;let b=bankData;openModal('شحن المحفظة بالتحويل المصرفي',`<div class="order"><b>بيانات التحويل المصرفي</b><p class="muted">المصرف: ${b.bank||'لم تُضف الإدارة بيانات المصرف بعد'}</p><p class="muted">اسم صاحب الحساب: ${b.owner||'—'}</p><p class="muted">رقم الحساب: ${b.account||'—'}</p><p class="muted">IBAN: ${b.iban||'—'}</p></div><label>المبلغ الذي حولته (د.ل)</label><input class="field" type="number" min="1" id="topAmount" placeholder="مثلاً 50"><label>تاريخ ووقت التحويل</label><input class="field" type="datetime-local" id="topDate"><label>رقم هاتفك للتواصل</label><input class="field" id="topPhone" value="${user.phone||''}" placeholder="2189xxxxxxxx"><p class="muted">بعد إرسال الطلب ستظهر لك صفحة «جاري المعالجة». يجب إرسال صورة إيصال التحويل عبر واتساب مع التاريخ ورقم الطلب حتى يتم تأكيد الشحن.</p><button class="primary" onclick="submitTopup()">إرسال طلب الشحن</button>`)}
-function submitTopup(){let amount=Number(document.getElementById('topAmount').value),date=document.getElementById('topDate').value,phone=document.getElementById('topPhone').value.trim();if(amount<=0||!date||!phone){toast('أكمل المبلغ والتاريخ ورقم الهاتف');return}let id='TP'+Date.now().toString().slice(-7),created=new Date().toLocaleString('ar-LY');topups.unshift({id,amount,transferDate:date,phone,status:'جاري المعالجة — بانتظار الإيصال',date:created,customer:user?.name||'عميل'});save();closeModal();showPage('wallet');renderWallet();openModal('طلبك قيد المعالجة',`<div class="empty"><div class="big">⏳</div><b>جاري معالجة طلب شحن المحفظة</b><p>رقم الطلب: <b>${id}</b></p><p>المبلغ: <b>${money(amount)}</b></p><p>تاريخ التحويل: ${date}</p><p class="muted">مهم جداً: أرسل صورة إيصال التحويل عبر واتساب، واكتب رقم الطلب والتاريخ في الرسالة. لن يُضاف الرصيد قبل مراجعة الإيصال.</p><button class="primary" onclick="sendTopupWhatsApp('${id}')">إرسال الإيصال عبر واتساب</button></div>`)}
-function sendTopupWhatsApp(id){let t=topups.find(x=>x.id===id);let wa=(bankData.whatsapp||'').replace(/[^0-9]/g,'');let msg=`مرحباً LY CARDS، أرسل إيصال التحويل لتأكيد شحن المحفظة. رقم الطلب: ${t.id}. الاسم: ${t.customer}. المبلغ: ${money(t.amount)}. تاريخ التحويل: ${t.transferDate}. سأرفق صورة الإيصال في هذه المحادثة.`;if(!wa){toast('الإدارة لم تضف رقم واتساب بعد');return}window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(msg),'_blank')}
-function adminTab(s,b){adminSection=s;document.querySelectorAll('.adminnav .tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderAdminContent()}
-function renderAdmin(){document.getElementById('adminStats').innerHTML=[['المبيعات',money(orders.reduce((a,o)=>a+o.total,0))],['الطلبات',orders.length],['المعلقة',orders.filter(o=>o.status==='جاري المراجعة').length],['العملاء',user?1:0]].map(x=>`<div class="stat"><small>${x[0]}</small><strong>${x[1]}</strong></div>`).join('');renderAdminContent()}
-function renderAdminContent(){let el=document.getElementById('adminContent');if(adminSection==='orders'){el.innerHTML=orders.length?orders.map(o=>`<div class="order"><b>${o.id}</b> <span class="status">${o.status}</span><div class="muted">${o.customer||'عميل'} • ${o.phone||''} • ${money(o.total)}</div><div class="muted">${o.items.map(i=>{let p=products.find(p=>p.id===i.id);return (p?.network||'كرت')+' '+(p?.value||'')+' × '+i.qty}).join('، ')}</div><label>تغيير الحالة ${o.refunded?'— تم استرداد المبلغ بالفعل':''}</label><select class="field" onchange="changeOrder('${o.id}',this.value)">${['جاري المراجعة','جاري التجهيز','تم إرسال الأكواد','مرفوض'].map(s=>`<option ${o.status===s?'selected':''}>${s}</option>`).join('')}</select>${o.refunded?'<p class="muted" style="color:var(--green)">✓ تم إرجاع قيمة هذا الطلب إلى محفظة العميل ولا يمكن استردادها مرة أخرى.</p>':''}<button class="secondary" onclick="sendWhatsApp('${o.id}')">إرسال تحديث عبر واتساب</button></div>`).join(''):'<div class="empty">لا توجد طلبات حالياً</div>'}else if(adminSection==='products'){el.innerHTML=`<button class="primary" onclick="addProductForm()">＋ إضافة كرت جديد</button>`+products.map(p=>`<div class="rowitem"><div><b>${p.network} — ${p.value} د.ل</b><div class="muted">سعر البيع: ${money(p.price)} • ${p.active?'نشط':'متوقف'}</div></div><button class="secondary" onclick="editProduct(${p.id})">تعديل</button></div>`).join('')}else if(adminSection==='topups'){el.innerHTML=topups.length?topups.map(t=>`<div class="order"><b>${t.id}</b> <span class="status wait">${t.status}</span><p>${money(t.amount)} — ${t.customer||'عميل'} • ${t.phone||''}</p><div class="muted">تاريخ الطلب: ${t.date}<br>تاريخ التحويل: ${t.transferDate||'غير محدد'}</div><p class="muted">تأكد من استلام الإيصال على واتساب قبل القبول.</p><button class="secondary" onclick="approveTopup('${t.id}')">تأكيد الإيصال وإضافة الرصيد</button> <button class="danger" onclick="rejectTopup('${t.id}')">رفض</button></div>`).join(''):'<div class="empty">لا توجد طلبات شحن</div>'}else if(adminSection==='bank'){el.innerHTML=`<h3>بياناتي المصرفية</h3><p class="muted">هذه البيانات ستظهر لكل العملاء عند طلب شحن المحفظة.</p><label>اسم المصرف</label><input class="field" id="bBank" value="${bankData.bank||''}" placeholder="اسم المصرف"><label>اسم صاحب الحساب</label><input class="field" id="bOwner" value="${bankData.owner||''}" placeholder="اسمك كما في الحساب"><label>رقم الحساب</label><input class="field" id="bAccount" value="${bankData.account||''}"><label>رقم IBAN</label><input class="field" id="bIban" value="${bankData.iban||''}"><label>رقم واتساب مع مفتاح الدولة</label><input class="field" id="bWhatsapp" value="${bankData.whatsapp||''}" placeholder="2189xxxxxxxx"><button class="primary" onclick="saveBankData()">حفظ بياناتي المصرفية</button>`}else{el.innerHTML=`<h3>إعدادات المتجر</h3><p class="muted">إعدادات النسخة التجريبية.</p><p class="muted">للحماية الحقيقية يجب ربط الموقع بخادم وقاعدة بيانات وتحديد بريد المالك في نظام الصلاحيات.</p>`}}
-function saveBankData(){bankData={bank:document.getElementById('bBank').value.trim(),owner:document.getElementById('bOwner').value.trim(),account:document.getElementById('bAccount').value.trim(),iban:document.getElementById('bIban').value.trim(),whatsapp:document.getElementById('bWhatsapp').value.trim()};save();toast('تم حفظ بياناتك المصرفية');renderAdminContent()}
-function changeOrder(id,status){let o=orders.find(x=>x.id===id);if(!o)return;if(status==='مرفوض' && !o.refunded){balance=Number((balance+Number(o.total||0)).toFixed(2));o.refunded=true;o.refundedAt=new Date().toLocaleString('ar-LY');history.unshift({title:'استرداد قيمة الطلب المرفوض '+o.id,amount:Number(o.total||0),date:o.refundedAt});}o.status=status;save();updateHeader();renderWallet();renderOrders();renderAdmin();toast(status==='مرفوض'?(o.refunded?'تم رفض الطلب وإرجاع المبلغ للمحفظة':'تم رفض الطلب'):'تم تحديث حالة الطلب')}
-function sendWhatsApp(id){let o=orders.find(x=>x.id===id);let msg=`مرحباً ${o.customer}، تحديث طلبك ${o.id} من LY CARDS. الحالة: ${o.status}. شكراً لثقتك بنا.`;window.open('https://wa.me/'+(o.phone||'')+'?text='+encodeURIComponent(msg),'_blank')}
-function addProductForm(){openModal('إضافة كرت',`<label>الشركة</label><select class="field" id="pn"><option>المدار</option><option>ليبيانا</option></select><label>الفئة</label><select class="field" id="pv"><option value="5">5 د.ل</option><option value="10">10 د.ل</option></select><label>سعر البيع</label><input class="field" id="pp" type="number" value="6"><button class="primary" onclick="createProduct()">إضافة</button>`)}function createProduct(){let network=document.getElementById('pn').value,value=+document.getElementById('pv').value,price=+document.getElementById('pp').value;if(price<=0)return toast('السعر غير صحيح');products.push({id:Date.now(),network,value,price,active:true});save();closeModal();renderProducts();renderAdminContent();toast('تمت إضافة الكرت')}
-function editProduct(id){let p=products.find(x=>x.id===id);openModal('تعديل الكرت',`<label>سعر البيع</label><input class="field" type="number" id="editPrice" value="${p.price}"><label><input type="checkbox" id="editActive" ${p.active?'checked':''}> المنتج نشط</label><button class="primary" onclick="saveProduct(${id})">حفظ التعديلات</button>`)}function saveProduct(id){let p=products.find(x=>x.id===id);p.price=+document.getElementById('editPrice').value;p.active=document.getElementById('editActive').checked;save();closeModal();renderProducts();renderAdminContent();toast('تم تحديث المنتج')}
-function approveTopup(id){let t=topups.find(x=>x.id===id);if(t.status!=='بانتظار التحقق')return; t.status='تم قبول التحويل';balance+=t.amount;history.unshift({title:'شحن المحفظة '+t.id,amount:t.amount,date:new Date().toLocaleString('ar-LY')});save();updateHeader();renderAdmin();toast('تمت إضافة الرصيد التجريبي')}
-function rejectTopup(id){let t=topups.find(x=>x.id===id);t.status='مرفوض';save();renderAdminContent();toast('تم رفض الطلب')}
-async function adminLogin(){toast('الإدارة مقفلة حالياً إلى أن نجهّز صلاحيات Firebase الآمنة.');}
+const defaults=[
+{id:1,network:'المدار',value:5,price:6,active:true},
+{id:2,network:'المدار',value:10,price:12,active:true},
+{id:3,network:'ليبيانا',value:5,price:6,active:true},
+{id:4,network:'ليبيانا',value:10,price:12,active:true}
+];
+
+let products=load('ly_products',defaults),
+cart=load('ly_cart',[]),
+balance=load('ly_balance',0),
+orders=load('ly_orders',[]),
+topups=load('ly_topups',[]),
+history=load('ly_history',[]),
+user=load('ly_user',null),
+adminMode=false,
+adminSection='orders',
+bankData=load('ly_bankdata',{bank:'',owner:'',account:'',iban:'',whatsapp:''});
+
+function load(k,d){
+try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}
+}
+
+function save(){
+[['ly_products',products],['ly_cart',cart],['ly_balance',balance],['ly_orders',orders],['ly_topups',topups],['ly_history',history],['ly_user',user],['ly_bankdata',bankData]].forEach(([k,v])=>localStorage.setItem(k,JSON.stringify(v)))
+}
+
+function money(n){return Number(n).toFixed(2)+' د.ل'}
+
+function toast(s){
+let t=document.getElementById('toast');
+t.textContent=s;
+t.classList.add('show');
+setTimeout(()=>t.classList.remove('show'),2200)
+}
+
+function showPage(id,btn){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('.navitem').forEach(n=>n.classList.toggle('active',n.dataset.page===id));
+if(id==='cart')renderCart();
+if(id==='wallet')renderWallet();
+if(id==='orders')renderOrders();
+if(id==='admin')renderAdmin();
+window.scrollTo({top:0,behavior:'smooth'})
+}
+
+function productCard(p){
+return `<article class="product">
+<div class="product-top">
+<span class="network"><i class="network-dot"></i>${p.network}</span>
+<span class="muted">متوفر</span>
+</div>
+<div class="denom">${p.value}<small> د.ل</small></div>
+<div class="muted">كرت شحن ${p.network}</div>
+<div class="product-foot">
+<div class="price">${money(p.price)}<br><small>سعر البيع</small></div>
+<button class="add" onclick="addCart(${p.id})">＋ أضف للسلة</button>
+</div>
+</article>`
+}
+
+function renderProducts(){
+let live=products.filter(p=>p.active);
+document.getElementById('homeProducts').innerHTML=live.map(productCard).join('');
+document.getElementById('storeProducts').innerHTML=live.map(productCard).join('')||'<div class="empty">لا توجد كروت حالياً</div>'
+}
+
+function filterProducts(net,btn){
+document.querySelectorAll('#home .tabs .tab').forEach(x=>x.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById('homeProducts').innerHTML=products.filter(p=>p.active&&(net==='الكل'||p.network===net)).map(productCard).join('')
+}
+
+function filterStore(net,btn){
+document.querySelectorAll('#store .tabs .tab').forEach(x=>x.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById('storeProducts').innerHTML=products.filter(p=>p.active&&(net==='الكل'||p.network===net)).map(productCard).join('')
+}
+
+function chooseNetwork(net){
+showPage('store');
+let b=[...document.querySelectorAll('#store .tab')].find(x=>x.textContent===net);
+filterStore(net,b)
+}
+
+function addCart(id){
+let p=products.find(x=>x.id===id);
+let item=cart.find(x=>x.id===id);
+if(item)item.qty++;
+else cart.push({id,qty:1});
+save();
+updateHeader();
+toast('تمت إضافة الكرت إلى السلة')
+}
+
+function updateHeader(){
+document.getElementById('cartCount').textContent=cart.reduce((a,x)=>a+x.qty,0);
+document.getElementById('headBalance').textContent=money(balance);
+}
+
+function renderCart(){
+let el=document.getElementById('cartPanel');
+if(!cart.length){
+el.innerHTML='<div class="empty"><div class="big">🛒</div><b>سلتك فارغة</b><p>أضف بعض كروت الشحن لتبدأ</p><button class="primary" onclick="showPage(\'store\')">تصفح الكروت</button></div>';
+return
+}
+let total=0;
+el.innerHTML=cart.map(i=>{
+let p=products.find(x=>x.id===i.id);
+if(!p)return '';
+total+=p.price*i.qty;
+return `<div class="rowitem">
+<div><b>${p.network} — ${p.value} د.ل</b><div class="muted">${money(p.price)} للكرت</div></div>
+<div class="qty">
+<button onclick="qty(${p.id},-1)">−</button>
+<b>${i.qty}</b>
+<button onclick="qty(${p.id},1)">＋</button>
+<button class="danger" onclick="removeCart(${p.id})">×</button>
+</div>
+</div>`
+}).join('')+
+`<div class="summary">
+<div class="sumline"><span>المجموع</span><b>${money(total)}</b></div>
+<div class="sumline"><span>رسوم الخدمة</span><b>مجاني</b></div>
+<div class="sumline total"><span>الإجمالي</span><b>${money(total)}</b></div>
+<button class="primary" onclick="checkout()">تأكيد الطلب</button>
+</div>`
+}
+
+function qty(id,d){
+let i=cart.find(x=>x.id===id);
+i.qty+=d;
+if(i.qty<=0)cart=cart.filter(x=>x.id!==id);
+save();
+renderCart();
+updateHeader()
+}
+
+function removeCart(id){
+cart=cart.filter(x=>x.id!==id);
+save();
+renderCart();
+updateHeader()
+}
+
+function checkout(){
+toast('الشراء الحقيقي غير مفعّل بعد؛ لن يتم خصم أي مبلغ.')
+}
+
+function renderWallet(){
+document.getElementById('walletBalance').textContent=money(balance);
+document.getElementById('walletHistory').innerHTML=history.length?
+history.map(h=>`<div class="rowitem">
+<div><b>${h.title}</b><div class="muted">${h.date}</div></div>
+<b style="color:${h.amount>0?'var(--green)':'var(--cyan)'}">${h.amount>0?'+':''}${money(h.amount)}</b>
+</div>`).join(''):'لا توجد عمليات بعد.'
+}
+
+function renderOrders(){
+let el=document.getElementById('ordersList');
+el.innerHTML=orders.length?
+orders.map(o=>`<div class="order">
+<div style="display:flex;justify-content:space-between">
+<b>${o.id}</b>
+<span class="status ${o.status==='تم إرسال الأكواد'?'ok':o.status==='مرفوض'?'bad':'wait'}">${o.status}</span>
+</div>
+<div class="muted">${o.date}</div>
+<div class="sumline"><span>عدد الكروت</span><b>${o.items.reduce((a,i)=>a+i.qty,0)}</b></div>
+<div class="sumline"><span>الإجمالي</span><b>${money(o.total)}</b></div>
+${o.status==='مرفوض'?`<div class="muted" style="color:var(--green)">تم رفض الطلب وإرجاع ${money(o.total)} إلى محفظتك ${o.refunded?'بنجاح':'— بانتظار تحديث الرصيد'}.</div>`:''}
+</div>`).join(''):
+'<div class="empty"><div class="big">▤</div>لا توجد طلبات حتى الآن</div>'
+}
+
+function openModal(title,html){
+document.getElementById('modalTitle').textContent=title;
+document.getElementById('modalBody').innerHTML=html;
+document.getElementById('modalbg').classList.add('show')
+}
+
+function closeModal(){
+document.getElementById('modalbg').classList.remove('show')
+}
+
+function openLogin(msg=''){
+openModal('تسجيل الدخول',`${msg?`<p class="muted">${msg}</p>`:''}
+<p class="muted">سجّل الدخول بحساب Google الرسمي. سيتم حفظ ملفك الشخصي في Firebase عند استضافة الموقع على نطاق مسموح.</p>
+<button class="primary" onclick="googleDemoLogin(this)" data-google-login>🌐 المتابعة باستخدام Google</button>
+<p class="muted">لن نطلب منك كلمة المرور هنا؛ ستظهر نافذة Google الرسمية. ملاحظة: يجب فتح الموقع من رابط مستضاف (وليس من ملف HTML محلي) حتى يقبل Firebase تسجيل الدخول.</p>`)
+}
+
+async function googleDemoLogin(btn){
+if(window.lyLoginBusy)return;
+window.lyLoginBusy=true;
+const b=btn||document.querySelector('[data-google-login]');
+if(b){
+b.disabled=true;
+b.dataset.oldText=b.textContent;
+b.textContent='جارٍ فتح Google...'
+}
+try{
+await window.lyFirebaseLogin()
+}catch(e){
+console.error('Google sign-in:',e);
+const code=e?.code||'';
+let msg='تعذر تسجيل الدخول. حاول مرة أخرى.';
+if(code==='auth/cancelled-popup-request')msg='تم إلغاء نافذة تسجيل سابقة. انتظر قليلاً ثم اضغط مرة واحدة.';
+else if(code==='auth/popup-blocked')msg='Chrome منع النافذة المنبثقة. اسمح بالنوافذ المنبثقة لهذا الموقع.';
+else if(code==='auth/unauthorized-domain')msg='نطاق الموقع غير مضاف في Firebase. يجب استضافة الموقع وإضافة النطاق في Authentication.';
+else if(code==='auth/popup-closed-by-user')msg='أغلقت نافذة Google قبل إكمال تسجيل الدخول.';
+else if(code==='auth/operation-not-allowed')msg='تسجيل Google غير مفعّل في Firebase Authentication.';
+else if(code==='auth/network-request-failed')msg='تحقق من اتصال الإنترنت ثم أعد المحاولة.';
+toast(msg)
+}finally{
+window.lyLoginBusy=false;
+if(b){
+b.disabled=false;
+b.textContent=b.dataset.oldText||'🌐 المتابعة باستخدام Google'
+}
+}
+}
+
+function openAccount(){
+if(!user){openLogin();return}
+openModal('حسابي',`<p><b>${user.name||'المستخدم'}</b></p>
+<p class="muted">${user.email||''}</p>
+<p class="muted">${user.phone||'يمكن إضافة رقم الهاتف لاحقاً'}</p>
+<button class="secondary" onclick="closeModal();showPage('orders')">طلباتي</button>
+<button class="secondary" onclick="adminLogin()">دخول الإدارة</button>
+<button class="danger" onclick="logoutUser()">تسجيل الخروج</button>`)
+}
+
+async function logoutUser(){
+try{
+await window.lyFirebaseLogout();
+user=null;
+save();
+closeModal();
+toast('تم تسجيل الخروج')
+}catch(e){toast('تعذر تسجيل الخروج')}
+}
+
+function openTopup(){
+if(!user){openLogin('سجّل الدخول أولاً');return}
+toast('شحن المحفظة غير مفعّل في هذه النسخة. لا تحوّل أي أموال.');
+return;
+let b=bankData;
+openModal('شحن المحفظة بالتحويل المصرفي',`<div class="order">
+<b>بيانات التحويل المصرفي</b>
+<p class="muted">المصرف: ${b.bank||'لم تُضف الإدارة بيانات المصرف بعد'}</p>
+<p class="muted">اسم صاحب الحساب: ${b.owner||'—'}</p>
+<p class="muted">رقم الحساب: ${b.account||'—'}</p>
+<p class="muted">IBAN: ${b.iban||'—'}</p>
+</div>
+<label>المبلغ الذي حولته (د.ل)</label>
+<input class="field" type="number" min="1" id="topAmount" placeholder="مثلاً 50">
+<label>تاريخ ووقت التحويل</label>
+<input class="field" type="datetime-local" id="topDate">
+<label>رقم هاتفك للتواصل</label>
+<input class="field" id="topPhone" value="${user.phone||''}" placeholder="2189xxxxxxxx">
+<p class="muted">بعد إرسال الطلب ستظهر لك صفحة «جاري المعالجة». يجب إرسال صورة إيصال التحويل عبر واتساب مع التاريخ ورقم الطلب حتى يتم تأكيد الشحن.</p>
+<button class="primary" onclick="submitTopup()">إرسال طلب الشحن</button>`)
+}
+
+function submitTopup(){
+let amount=Number(document.getElementById('topAmount').value),
+date=document.getElementById('topDate').value,
+phone=document.getElementById('topPhone').value.trim();
+if(amount<=0||!date||!phone){
+toast('أكمل المبلغ والتاريخ ورقم الهاتف');
+return
+}
+let id='TP'+Date.now().toString().slice(-7),
+created=new Date().toLocaleString('ar-LY');
+topups.unshift({id,amount,transferDate:date,phone,status:'جاري المعالجة — بانتظار الإيصال',date:created,customer:user?.name||'عميل'});
+save();
+closeModal();
+showPage('wallet');
+renderWallet();
+openModal('طلبك قيد المعالجة',`<div class="empty">
+<div class="big">⏳</div>
+<b>جاري معالجة طلب شحن المحفظة</b>
+<p>رقم الطلب: <b>${id}</b></p>
+<p>المبلغ: <b>${money(amount)}</b></p>
+<p>تاريخ التحويل: ${date}</p>
+<p class="muted">مهم جداً: أرسل صورة إيصال التحويل عبر واتساب، واكتب رقم الطلب والتاريخ في الرسالة. لن يُضاف الرصيد قبل مراجعة الإيصال.</p>
+<button class="primary" onclick="sendTopupWhatsApp('${id}')">إرسال الإيصال عبر واتساب</button>
+</div>`)
+}
+
+function sendTopupWhatsApp(id){
+let t=topups.find(x=>x.id===id);
+let wa=(bankData.whatsapp||'').replace(/[^0-9]/g,'');
+let msg=`مرحباً LY CARDS، أرسل إيصال التحويل لتأكيد شحن المحفظة. رقم الطلب: ${t.id}. الاسم: ${t.customer}. المبلغ: ${money(t.amount)}. تاريخ التحويل: ${t.transferDate}. سأرفق صورة الإيصال في هذه المحادثة.`;
+if(!wa){toast('الإدارة لم تضف رقم واتساب بعد');return}
+window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(msg),'_blank')
+}
+
+function adminTab(s,b){
+adminSection=s;
+document.querySelectorAll('.adminnav .tab').forEach(x=>x.classList.remove('active'));
+b.classList.add('active');
+renderAdminContent()
+}
+
+function renderAdmin(){
+document.getElementById('adminStats').innerHTML=[
+['المبيعات',money(orders.reduce((a,o)=>a+o.total,0))],
+['الطلبات',orders.length],
+['المعلقة',orders.filter(o=>o.status==='جاري المراجعة').length],
+['العملاء',user?1:0]
+].map(x=>`<div class="stat"><small>${x[0]}</small><strong>${x[1]}</strong></div>`).join('');
+renderAdminContent()
+}
+
+function renderAdminContent(){
+let el=document.getElementById('adminContent');
+if(adminSection==='orders'){
+el.innerHTML=orders.length?
+orders.map(o=>`<div class="order">
+<b>${o.id}</b> <span class="status">${o.status}</span>
+<div class="muted">${o.customer||'عميل'} • ${o.phone||''} • ${money(o.total)}</div>
+<div class="muted">${o.items.map(i=>{let p=products.find(p=>p.id===i.id);return (p?.network||'كرت')+' '+(p?.value||'')+' × '+i.qty}).join('، ')}</div>
+<label>تغيير الحالة ${o.refunded?'— تم استرداد المبلغ بالفعل':''}</label>
+<select class="field" onchange="changeOrder('${o.id}',this.value)">${['جاري المراجعة','جاري التجهيز','تم إرسال الأكواد','مرفوض'].map(s=>`<option ${o.status===s?'selected':''}>${s}</option>`).join('')}</select>
+${o.refunded?'<p class="muted" style="color:var(--green)">✓ تم إرجاع قيمة هذا الطلب إلى محفظة العميل ولا يمكن استردادها مرة أخرى.</p>':''}
+<button class="secondary" onclick="sendWhatsApp('${o.id}')">إرسال تحديث عبر واتساب</button>
+</div>`).join(''):
+'<div class="empty">لا توجد طلبات حالياً</div>'
+}else if(adminSection==='products'){
+el.innerHTML=`<button class="primary" onclick="addProductForm()">＋ إضافة كرت جديد</button>`+
+products.map(p=>`<div class="rowitem">
+<div><b>${p.network} — ${p.value} د.ل</b><div class="muted">سعر البيع: ${money(p.price)} • ${p.active?'نشط':'متوقف'}</div></div>
+<button class="secondary" onclick="editProduct(${p.id})">تعديل</button>
+</div>`).join('')
+}else if(adminSection==='topups'){
+el.innerHTML=topups.length?
+topups.map(t=>`<div class="order">
+<b>${t.id}</b> <span class="status wait">${t.status}</span>
+<p>${money(t.amount)} — ${t.customer||'عميل'} • ${t.phone||''}</p>
+<div class="muted">تاريخ الطلب: ${t.date}<br>تاريخ التحويل: ${t.transferDate||'غير محدد'}</div>
+<p class="muted">تأكد من استلام الإيصال على واتساب قبل القبول.</p>
+<button class="secondary" onclick="approveTopup('${t.id}')">تأكيد الإيصال وإضافة الرصيد</button>
+<button class="danger" onclick="rejectTopup('${t.id}')">رفض</button>
+</div>`).join(''):
+'<div class="empty">لا توجد طلبات شحن</div>'
+}else if(adminSection==='bank'){
+el.innerHTML=`<h3>بياناتي المصرفية</h3>
+<p class="muted">هذه البيانات ستظهر لكل العملاء عند طلب شحن المحفظة.</p>
+<label>اسم المصرف</label><input class="field" id="bBank" value="${bankData.bank||''}" placeholder="اسم المصرف">
+<label>اسم صاحب الحساب</label><input class="field" id="bOwner" value="${bankData.owner||''}" placeholder="اسمك كما في الحساب">
+<label>رقم الحساب</label><input class="field" id="bAccount" value="${bankData.account||''}">
+<label>رقم IBAN</label><input class="field" id="bIban" value="${bankData.iban||''}">
+<label>رقم واتساب مع مفتاح الدولة</label><input class="field" id="bWhatsapp" value="${bankData.whatsapp||''}" placeholder="2189xxxxxxxx">
+<button class="primary" onclick="saveBankData()">حفظ بياناتي المصرفية</button>`
+}else{
+el.innerHTML=`<h3>إعدادات المتجر</h3>
+<p class="muted">إعدادات النسخة التجريبية.</p>
+<p class="muted">للحماية الحقيقية يجب ربط الموقع بخادم وقاعدة بيانات وتحديد بريد المالك في نظام الصلاحيات.</p>`
+}
+}
+
+function saveBankData(){
+bankData={
+bank:document.getElementById('bBank').value.trim(),
+owner:document.getElementById('bOwner').value.trim(),
+account:document.getElementById('bAccount').value.trim(),
+iban:document.getElementById('bIban').value.trim(),
+whatsapp:document.getElementById('bWhatsapp').value.trim()
+};
+save();
+toast('تم حفظ بياناتك المصرفية');
+renderAdminContent()
+}
+
+function changeOrder(id,status){
+let o=orders.find(x=>x.id===id);
+if(!o)return;
+if(status==='مرفوض' && !o.refunded){
+balance=Number((balance+Number(o.total||0)).toFixed(2));
+o.refunded=true;
+o.refundedAt=new Date().toLocaleString('ar-LY');
+history.unshift({title:'استرداد قيمة الطلب المرفوض '+o.id,amount:Number(o.total||0),date:o.refundedAt});
+}
+o.status=status;
+save();
+updateHeader();
+renderWallet();
+renderOrders();
+renderAdmin();
+toast(status==='مرفوض'?(o.refunded?'تم رفض الطلب وإرجاع المبلغ للمحفظة':'تم رفض الطلب'):'تم تحديث حالة الطلب')
+}
+
+function sendWhatsApp(id){
+let o=orders.find(x=>x.id===id);
+let msg=`مرحباً ${o.customer}، تحديث طلبك ${o.id} من LY CARDS. الحالة: ${o.status}. شكراً لثقتك بنا.`;
+window.open('https://wa.me/'+(o.phone||'')+'?text='+encodeURIComponent(msg),'_blank')
+}
+
+function addProductForm(){
+openModal('إضافة كرت',`<label>الشركة</label>
+<select class="field" id="pn"><option>المدار</option><option>ليبيانا</option></select>
+<label>الفئة</label>
+<select class="field" id="pv"><option value="5">5 د.ل</option><option value="10">10 د.ل</option></select>
+<label>سعر البيع</label>
+<input class="field" id="pp" type="number" value="6">
+<button class="primary" onclick="createProduct()">إضافة</button>`)
+}
+
+function createProduct(){
+let network=document.getElementById('pn').value,
+value=+document.getElementById('pv').value,
+price=+document.getElementById('pp').value;
+if(price<=0)return toast('السعر غير صحيح');
+products.push({id:Date.now(),network,value,price,active:true});
+save();
+closeModal();
+renderProducts();
+renderAdminContent();
+toast('تمت إضافة الكرت')
+}
+
+function editProduct(id){
+let p=products.find(x=>x.id===id);
+openModal('تعديل الكرت',`<label>سعر البيع</label>
+<input class="field" type="number" id="editPrice" value="${p.price}">
+<label><input type="checkbox" id="editActive" ${p.active?'checked':''}> المنتج نشط</label>
+<button class="primary" onclick="saveProduct(${id})">حفظ التعديلات</button>`)
+}
+
+function saveProduct(id){
+let p=products.find(x=>x.id===id);
+p.price=+document.getElementById('editPrice').value;
+p.active=document.getElementById('editActive').checked;
+save();
+closeModal();
+renderProducts();
+renderAdminContent();
+toast('تم تحديث المنتج')
+}
+
+function approveTopup(id){
+let t=topups.find(x=>x.id===id);
+if(t.status!=='بانتظار التحقق')return;
+t.status='تم قبول التحويل';
+balance+=t.amount;
+history.unshift({title:'شحن المحفظة '+t.id,amount:t.amount,date:new Date().toLocaleString('ar-LY')});
+save();
+updateHeader();
+renderAdmin();
+toast('تمت إضافة الرصيد التجريبي')
+}
+
+function rejectTopup(id){
+let t=topups.find(x=>x.id===id);
+t.status='مرفوض';
+save();
+renderAdminContent();
+toast('تم رفض الطلب')
+}
+
+async function adminLogin(){
+if (!user) {
+  openLogin('سجّل الدخول بحساب المدير أولاً');
+  return;
+}
+
+if (typeof window.lyFirebaseIsAdmin !== 'function') {
+  toast('تعذر التحقق من صلاحيات الإدارة.');
+  return;
+}
+
+try {
+  const allowed = await window.lyFirebaseIsAdmin();
+
+  if (!allowed) {
+    toast('هذا الحساب ليس لديه صلاحية الإدارة.');
+    return;
+  }
+
+  closeModal();
+  showPage('admin');
+
+} catch (e) {
+  console.error('Admin check:', e);
+  toast('تعذر التحقق من الصلاحيات. تأكد من قواعد Firestore.');
+}
+}
+
 // دخول الإدارة موجود داخل قائمة حساب المالك فقط في واجهة النسخة التجريبية.
-renderProducts();updateHeader();
+renderProducts();
+updateHeader();
 </script><script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
-import { getFirestore, doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+import {
+getAuth,
+GoogleAuthProvider,
+signInWithPopup,
+signOut,
+onAuthStateChanged,
+setPersistence,
+browserLocalPersistence
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+
+import {
+getFirestore,
+doc,
+getDoc,
+setDoc,
+serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAlkasHM2UQTD4UWgBMeEQHOtsA2R7nd4E",
-  authDomain: "ly-cards.firebaseapp.com",
-  projectId: "ly-cards",
-  storageBucket: "ly-cards.firebasestorage.app",
-  messagingSenderId: "118985051307",
-  appId: "1:118985051307:web:28f519269d222e08457bee"
+apiKey: "AIzaSyAlkasHM2UQTD4UWgBMeEQHOtsA2R7nd4E",
+authDomain: "ly-cards.firebaseapp.com",
+projectId: "ly-cards",
+storageBucket: "ly-cards.firebasestorage.app",
+messagingSenderId: "118985051307",
+appId: "1:118985051307:web:28f519269d222e08457bee"
 };
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
 await setPersistence(auth, browserLocalPersistence);
+
 const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
+
 let popupInProgress = false;
+
 window.lyFirebaseLogin = async () => {
-  if (location.protocol === 'file:') throw Object.assign(new Error('يلزم فتح الموقع من نطاق مستضاف على الإنترنت.'), {code:'auth/unauthorized-domain'});
-  if (popupInProgress) return;
-  popupInProgress = true;
-  try { await signInWithPopup(auth, provider); } finally { popupInProgress = false; }
+if (location.protocol === 'file:')
+throw Object.assign(
+new Error('يلزم فتح الموقع من نطاق مستضاف على الإنترنت.'),
+{code:'auth/unauthorized-domain'}
+);
+
+if (popupInProgress) return;
+
+popupInProgress = true;
+
+try {
+await signInWithPopup(auth, provider);
+} finally {
+popupInProgress = false;
+}
 };
-window.lyFirebaseLogout = async () => { await signOut(auth); };
+
+window.lyFirebaseLogout = async () => {
+await signOut(auth);
+};
+
 window.lyFirebaseIsAdmin = async () => {
-  const u = auth.currentUser;
-  if (!u) return false;
-  const snap = await getDoc(doc(db, "admins", u.uid));
-  return snap.exists() && snap.data().active === true;
+const u = auth.currentUser;
+
+if (!u) return false;
+
+const snap = await getDoc(doc(db, "admins", u.uid));
+
+return snap.exists() && snap.data().active === true;
 };
+
 onAuthStateChanged(auth, async (u) => {
-  if (!u) { user = null; updateHeader(); return; }
-  user = { uid: u.uid, name: u.displayName || "مستخدم Google", email: u.email || "", phone: u.phoneNumber || "", photoURL: u.photoURL || "" };
-  try {
-    await setDoc(doc(db, "users", u.uid), {
-      uid: u.uid, name: user.name, email: user.email,
-      photoURL: u.photoURL || "", updatedAt: serverTimestamp()
-    }, { merge: true });
-  } catch (e) { console.error("Profile sync:", e); toast("تم تسجيل الدخول، لكن تعذر حفظ الملف الشخصي في Firestore. راجع Rules."); }
-  updateHeader();
-  if (typeof closeModal === "function") closeModal();
-  toast("تم تسجيل الدخول بحساب Google بنجاح");
+
+if (!u) {
+user = null;
+updateHeader();
+return;
+}
+
+user = {
+uid: u.uid,
+name: u.displayName || "مستخدم Google",
+email: u.email || "",
+phone: u.phoneNumber || "",
+photoURL: u.photoURL || ""
+};
+
+try {
+await setDoc(doc(db, "users", u.uid), {
+uid: u.uid,
+name: user.name,
+email: user.email,
+photoURL: u.photoURL || "",
+updatedAt: serverTimestamp()
+}, { merge: true });
+
+} catch (e) {
+console.error("Profile sync:", e);
+toast("تم تسجيل الدخول، لكن تعذر حفظ الملف الشخصي في Firestore. راجع Rules.");
+}
+
+updateHeader();
+
+if (typeof closeModal === "function")
+closeModal();
+
+toast("تم تسجيل الدخول بحساب Google بنجاح");
+
 });
-</script>
-</body></html>
+
+</script></body>
+</html>
